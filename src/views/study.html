@@ -61,12 +61,12 @@
                         src="{{proffy.avatar}}" 
                         alt="{{proffy.name}}">
                     <div>
-                        <strong>Diego Fernandes</strong>
-                        <span>Química</span>
+                        <strong>{{proffy.name}}</strong>
+                        <span>{{proffy.subject}}</span>
                     </div>
                 </header>
             
-                <p>Entusiasta das melhores tecnologias de química avançada.<br><br>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p>
+                <p>{{proffy.bio}}</p>
             
                 <footer>
                     <p>Preço/hora<strong>R$ {{proffy.cost}}</strong>
@@ -74,7 +74,7 @@
 
                     <a href="https://api.whatsapp.com/send?l=pt_BR&phone=55{{proffy.whatsapp}}&text=Tenho interesse na sua aula de {{proffy.subject}} {{proffy.name}}"
                     class="button" target="_blank">
-                        <img src="/images/icons/whatsapp.svg" alt="Whatsapp">Entra em contato
+                        <img src="/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
                     </a>
                 </footer>
             </article>

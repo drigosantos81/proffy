@@ -68,7 +68,7 @@
                         <label for="cost">Custo da sua hora/aula
                             <small>(R$)</small>
                         </label>
-                        <input name="cost" type="number" id="cost" name="cost" required>
+                        <input name="cost" type="cost" id="cost" name="number" required>
                     </div>
                 </fieldset>
                 <!-- Horários disponíveis -->
@@ -81,7 +81,6 @@
 
                         <div class="select-block">
                             <label for="weekday">Dia da semana</label>
-
                             <select name="weekday[]" required>
                                 <option value="">Selecione uma opção</option>
                                 {% for weekday in weekdays %}
@@ -100,7 +99,7 @@
                             <input type="time" name="time_to[]" required>
                         </div>
 
-                    </div>                   
+                    </div>
                 </fieldset>
             </form>
 
@@ -110,14 +109,12 @@
                     Importante! <br>
                     Preencha todos os dados
                 </p>
-                <button type="submit" id="create-class">Salvar cadastro</button>
+                <button type="submit" form="create-class">Salvar cadastro</button>
             </footer>
        </main>       
     </div>
 
-    <script src="./scripts/addFields.js">
-
-    </script>
+    <script src="./scripts/addFields.js"></script>
     
 </body>
 </html>

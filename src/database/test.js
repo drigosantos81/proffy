@@ -31,16 +31,14 @@ Database.then(async (db) => {
     // await createProffy(db, { proffyValue, classValue, classScheduleValues });
 
     const selectedProffys = await db.all("SELECT * FROM proffys");
-    // console.log(selectedProffys);
-
+    
     const selectClassesAndProffys = await db.all(`
         SELECT classes.*, proffys.*
         FROM proffys
         JOIN classes ON (classes.proffy_id = proffys.id)
         WHERE classes.proffy_id = 1
     `);
-    // console.log(selectClassesAndProffys);
-
+    
     const selectClassesSchedule = await db.all(`
         SELECT class_schedule.*
         FROM class_schedule
@@ -49,5 +47,4 @@ Database.then(async (db) => {
         AND class_schedule.time_from <= "1300"
         AND class_schedule.time_to > "1300"
     `);
-    // console.log(selectClassesSchedule);
 });

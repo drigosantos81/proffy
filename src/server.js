@@ -23,6 +23,29 @@ const proffys = [
     }
 ]
 
+const subjects = [
+    "Artes",
+    "Biologia",
+    "Ciências",
+    "física",
+    "Física",
+    "Geografia",
+    "História",
+    "Matemática",
+    "Português",
+    "Química",
+]
+
+const weekdays = [
+    "Domingo",
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira",
+    "Sábado",
+]
+
 const express = require('express');
 const server = express();
 const nunjucks = require('nunjucks');
@@ -37,11 +60,14 @@ function pageLanding(req, res) {
 }
 
 function pageStudy(req, res) {
-    return res.render("study.html", { proffys });
+    const filters = req.query;
+    return res.render("study.html", { proffys, filters, subjects, weekdays });
 }
 
 function pageGiveClasses(req, res) {
-    return res.render("give-classes.html");
+    const dados = req.query;
+    console.log(dados);
+    return res.render("give-classes.html", { subjects, weekdays });
 }
 
 server

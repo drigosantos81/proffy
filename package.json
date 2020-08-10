@@ -1,0 +1,23 @@
+{
+  "name": "nlw-starter-082020",
+  "version": "1.0.0",
+  "description": "Projeto NLW #2 - \"Proffy\" - Sistema de gerenciamento de aulas. Comunicação entre educadores e alunos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drigosantos81/proffy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drigosantos81/proffy/issues"
+  },
+  "homepage": "https://github.com/drigosantos81/proffy#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

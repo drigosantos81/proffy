@@ -111,6 +111,7 @@ c fieldset+fieldset {
 
     #page-give-classes main fieldset {
         padding: 0 64px;
+        margin-bottom: 30px;
     }
 
     .schedule-item {

@@ -46,6 +46,11 @@ const weekdays = [
     "Sábado",
 ]
 
+function getSubject(subjectNumber) {
+    const position = +subjectNumber - 1
+    return subjects[position]
+}
+
 const express = require('express');
 const server = express();
 const nunjucks = require('nunjucks');
@@ -66,7 +71,14 @@ function pageStudy(req, res) {
 
 function pageGiveClasses(req, res) {
     const dados = req.query;
-    console.log(dados);
+    const isNotEmpty = Object.keys(dados).length == 0;
+    if (isNotEmpty) {
+        dados.subject = getSubject(dados.subject)
+        console.log("Entrei aqui");
+        proffys.push(dados);
+
+        return res.redirect("/study");
+    }    
     return res.render("give-classes.html", { subjects, weekdays });
 }
 
